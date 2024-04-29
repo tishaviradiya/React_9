@@ -1,6 +1,7 @@
 
 
 import Home from './Pages/Home'
+import Card from "./Pages/Card"
 
 function App() {
 
@@ -8,6 +9,7 @@ function App() {
     <>
       <div>
           <Home/>
+          <Card/>
       </div>
     </>
   )
