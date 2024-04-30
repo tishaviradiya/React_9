@@ -1,0 +1,53 @@
+{
+  "posts": [
+    {
+      "userId": 1,
+      "id": 1,
+      "title": "quidem molestiae enim"
+    },
+    {
+      "userId": 1,
+      "id": 1,
+      "title": "quidem molestiae enim"
+    },
+    {
+      "userId": 1,
+      "id": 1,
+      "title": "quidem molestiae enim"
+    }
+  ],
+  "comments": [
+    {
+      "userId": 1,
+      "id": 1,
+      "title": "quidem molestiae enim"
+    },
+    {
+      "userId": 1,
+      "id": 1,
+      "title": "quidem molestiae enim"
+    },
+    {
+      "userId": 1,
+      "id": 1,
+      "title": "quidem molestiae enim"
+    }
+  ],
+  "profile": [
+    {
+      "userId": 1,
+      "id": 1,
+      "title": "quidem molestiae enim"
+    },
+    {
+      "userId": 1,
+      "id": 1,
+      "title": "quidem molestiae enim"
+    },
+    {
+      "userId": 1,
+      "id": 1,
+      "title": "quidem molestiae enim"
+    }
+  ]
+}
