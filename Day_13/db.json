@@ -1,0 +1,27 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "username": "tisha",
+      "email": "tishaviradiya@gmail.com",
+      "password": "123",
+      "id": 2
+    },
+    {
+      "username": "piaa",
+      "email": "p@gmail.com",
+      "password": "123",
+      "id": 3
+    },
+    {
+      "username": "kinjal",
+      "email": "k@gmail.com",
+      "password": "321",
+      "id": 4
+    }
+  ]
+}
