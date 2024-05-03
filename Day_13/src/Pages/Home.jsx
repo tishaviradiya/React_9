@@ -43,7 +43,7 @@ const Home=()=>{
             setUser(data);
         })
     },[])
-    // Delete
+    // Delete functionality
     const handleDelete=(id)=>{
         fetch(`http://localhost:8001/users/${id}`,{
             method: "DELETE",
