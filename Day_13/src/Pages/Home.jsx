@@ -75,7 +75,7 @@ const Home = () => {
                 {user.map((value, index) => {
                     return <div key={index}>
                         <h2>{value.id}</h2>
-                        <img src={value.thumbnail} alt="" />
+                        <img src={value.} alt="" />
                         <h2>{value.title}</h2>
                         <h3>{value.price}</h3>
                         <h4>{value.category}</h4>
