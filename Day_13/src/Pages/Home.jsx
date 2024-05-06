@@ -19,7 +19,7 @@ const Home = () => {
     }
     const handleSubmit = (e) => {
         e.preventDefault();
-        fetch('http://localhost:8000/users', {
+        fetch(' http://localhost:8001', {
 
             method: "POST",
             headers: {
@@ -39,7 +39,7 @@ const Home = () => {
     }
     // Read
     useEffect(() => {
-        fetch(`http://localhost:8000/users?q=${search}`)
+        fetch(` http://localhost:8001?q=${search}`)
             .then((res) => res.json())
             .then((data) => {
                 setUser(data);
@@ -75,7 +75,7 @@ const Home = () => {
                 {user.map((value, index) => {
                     return <div key={index}>
                         <h2>{value.id}</h2>
-                        <img src={value.} alt="" />
+                        <img src={value.thumbnail} alt="" />
                         <h2>{value.title}</h2>
                         <h3>{value.price}</h3>
                         <h4>{value.category}</h4>
