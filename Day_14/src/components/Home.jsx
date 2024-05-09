@@ -9,6 +9,7 @@ const Home=()=>{
     const[password,setPassword]=useState("");
     const[user,setUser]=useState([]);
     const[search,setSearch]=useState("");
+    const[edit,setEdit]=useState(null);
 
     // create
     const data={
@@ -59,8 +60,28 @@ const Home=()=>{
             console.log(data)
             alert("data deleted successfully!")
         })
-
     }
+    const handleEdit=(id)=>{
+        const editData=user.find((item)=>item.id===id)
+        setEdit(editData)
+    }
+    const handleUpdate = () => {
+        fetch(`http://localhost:8001/users/${edit.id}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(edit) // Sending the whole edit object
+        })
+        .then((res) => res.json())
+        .then((data) => {
+            console.log(data);
+            window.location.reload();
+        })
+        .catch(error => console.error('Error updating data:', error));
+    }
+    
+    console.log("edit ",edit);
         return(
             <div>
                 <div>
@@ -71,7 +92,7 @@ const Home=()=>{
                     <button onClick={handleDescending}>Descending</button>
                 </div>
                 <form onSubmit={handleSubmit}>
-                    <div>
+                    <div>   
                     <input type="text" name="name" onChange={(e)=>{setName(e.target.value)}} value={name} placeholder="Name"/>
                     </div>
                     <div>
@@ -82,7 +103,8 @@ const Home=()=>{
                     </div>
                     <input type="submit" />
                 </form>
-                <div>
+                <div style={{display:"flex"}}>
+                    <div>
                     {user.map((value,index)=>{
                            return (
                             <div key={index}>
@@ -94,9 +116,16 @@ const Home=()=>{
                                 <h4>{value.brand}</h4>
                                 <h4>{value.category}</h4>
                                 <button onClick={()=>{handleDelete(value.id)}}>Delete</button>
+                                <button onClick={()=>{handleEdit(value.id)}}>Edit</button>
                             </div>
                            )
                     })}
+                    </div>
+                  { edit &&   <div>
+                        <input type="text" placeholder="Edit data here..." value={edit.title} onChange={(e)=>setEdit({...edit,title:e.target.value})}/>
+                        <button onClick={handleUpdate}>Update</button>
+                    </div>
+                    }
                 </div>
             </div>
         )
