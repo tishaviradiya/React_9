@@ -1,8 +1,5 @@
 import { useEffect, useState } from "react";
 
-
-
-
 const Home=()=>{
     const[name,setName]=useState("");
     const[email,setEmail]=useState("");
@@ -78,7 +75,7 @@ const Home=()=>{
             console.log(data);
             window.location.reload();
         })
-        .catch(error => console.error('Error updating data:', error));
+        .catch(error => console.error('Error', error));
     }
     
     console.log("edit ",edit);
@@ -110,7 +107,11 @@ const Home=()=>{
                             <div key={index}>
                                 <img src={value.thumbnail} alt="" width="300px"/>
                                 <h2>{value.id}</h2>
-                                <h2>{value.title}</h2>
+                                <h2>{value.title}  { edit && edit.id ===value.id && <div>
+                        <input type="text" placeholder="Edit title here..." value={edit.title.id} onChange={(e)=>setEdit({...edit,title:e.target.value})}/>
+                        <button onClick={handleUpdate}>Update</button>
+                    </div>
+                    }</h2>
                                 <h4>{value.price}</h4>
                                 <h4>{value.stock}</h4>
                                 <h4>{value.brand}</h4>
@@ -121,11 +122,7 @@ const Home=()=>{
                            )
                     })}
                     </div>
-                  { edit &&   <div>
-                        <input type="text" placeholder="Edit data here..." value={edit.title} onChange={(e)=>setEdit({...edit,title:e.target.value})}/>
-                        <button onClick={handleUpdate}>Update</button>
-                    </div>
-                    }
+                 
                 </div>
             </div>
         )
