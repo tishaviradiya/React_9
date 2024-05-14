@@ -8,7 +8,7 @@ const Home = () => {
     console.log(theme);
     return (
         <div style={{ backgroundColor: theme ? "white" : "black", width:"100vw", height:"100vh"}}>
-            <button onClick={handleTheme}>Theme</button>
+            <button onClick={handleTheme}>{theme?"Light-Mode":"Dark-Mode"}</button>
         </div>
     );
 };
