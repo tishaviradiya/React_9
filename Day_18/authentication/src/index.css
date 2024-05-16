@@ -1,4 +1,4 @@
-:root {
+/* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -65,4 +65,18 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+} */
+.home a{
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: bold;
+  color: black;
+}
+.home{
+  background-color: #f3efef;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+  box-shadow: 0 5px 5px 5px rgba(0,0,0,0.1);
 }
