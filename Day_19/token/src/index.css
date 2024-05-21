@@ -1,0 +1,18 @@
+
+
+
+.home{
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 5px 5px 5px 0 rgba(0 ,0 ,0, 0.1);
+
+}
+ul li{
+  padding: 20px;
+  list-style: none;
+
+}
+a{
+  text-decoration: none;
+}
