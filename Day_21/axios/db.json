@@ -1,0 +1,16 @@
+{
+  "todos": [
+    {
+      "todo": "exercise",
+      "id": 1
+    },
+    {
+      "todo": "yoga",
+      "id": 2
+    },
+    {
+      "todo": "javascript",
+      "id": 3
+    }
+  ]
+}
